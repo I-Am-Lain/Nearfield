@@ -1,0 +1,364 @@
+html {
+  height: 100%;
+}
+/* .change-me{
+  border: 2px white solid;
+  background-color: green;
+  height: 50vh;
+  width: 200vh;
+  opacity: 50%;
+}
+
+.change-me p{
+  color: white;
+} */
+
+
+
+/* Admin Button */
+.admin-button{ 
+  position: absolute;
+  bottom: 2.5vh;
+  right: 10vh;
+  border: 2px red solid;
+}
+
+.admin-div{
+  position: absolute;
+  bottom: 10vh;
+  right: 2.5vh;
+  border: 2px yellow solid;
+}
+
+.admin-div button{
+  margin: 2vh;
+}
+
+.editing-form{
+  right: 50vh;
+}
+
+/* .exit-btn{
+  position: absolute;
+  bottom: 10vh;
+  right: 2.5vh;
+  border: 2px yellow solid;
+}
+.new-btn{
+  position: absolute;
+  bottom: 10vh;
+  right: 15vh;
+  border: 2px yellow solid;
+}
+.update-btn{
+  position: absolute;
+  bottom: 10vh;
+  right: 22.5vh;
+  border: 2px yellow solid;
+}
+.delete-btn{
+  position: absolute;
+  bottom: 10vh;
+  right: 35vh;
+  border: 2px yellow solid;
+} */
+
+
+/* Container CSS */
+body { /* may present conflictions */
+  margin: 0;
+  padding: 0;
+  background: #000000 url(loading.gif) center center no-repeat;
+  color: #ffffff;
+  font-family: sans-serif;
+  font-size: 13px;
+  line-height: 20px;
+  height: 100%;
+}
+
+/* #title {
+  position: absolute;
+  top: 20px;
+  width: 320px;
+  left: 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  font: 20px/20px Georgia;
+  padding: 15px;
+} */
+
+#container{ /* sets the container as 'the background' */
+  /* background-color: blue; to simulate where THREE.js container is */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+}
+
+
+/**/
+/* Hamburger Icon */
+#menu {
+  width: 35px;
+  height: 30px;
+  margin: 30px 0 20px 20px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.bar {
+  height: 5px;
+  width: 100%;
+  background-color: white;
+  display: block;
+  border-radius: 5px;
+  transition: 0.55s ease;
+}
+
+#bar1 {
+  transform: translateY(-4px);
+}
+
+#bar3 {
+  transform: translateY(4px);
+}
+
+/* Hamburger Change Effect */
+.change .bar {
+  /* color the hamburger after click */
+  background-color: white;
+}
+
+.change #bar1 {
+  transform: translateY(4px) rotateZ(-45deg);
+}
+
+.change #bar2 {
+  opacity: 0;
+}
+
+.change #bar3 {
+  transform: translateY(-6px) rotate(45deg);
+}
+
+/* Hamburger Drop-Down */
+.nav li {
+  color: white;
+  text-decoration: none;
+}
+
+.nav li a:hover {
+  font-weight: bold;
+}
+
+.nav li {
+  /* each satellite(li) in the box (ul.nav) */
+  list-style: none;
+  padding: 16px 0;
+  border-bottom-style: dotted;
+  border-color: #f806d8;
+  border-width: 1px;
+  text-align: center;
+}
+
+.nav {
+  /* The box around the list */
+  position: absolute;
+  padding: 0;
+  margin: 0 20px;
+  width: 46vh; /**/
+  border-style: solid;
+  border-color: #02701a;
+  border-width: 3px;
+  opacity: 0;
+  transition: 1.3s ease;
+  max-height: 65vh; /**/
+  /*The important part*/
+  overflow-y: auto;
+  /*Also...*/
+  overflow-x: hidden;
+  /*And the end of the important part*/
+  transition: transform 0.75s ease-out;
+  scale: 0.1;
+}
+
+/* Hamburger Color Effects */
+.change-nav {
+  /* being applied to .nav*/
+  opacity: 75%;
+  transform: scale(1);
+}
+
+.menu-bg, #menu-bar {
+  top: 0;
+  left: 0;
+  position: absolute;
+  border-radius: 50%;
+}
+
+#menu-bar {
+  z-index: 2;
+}
+
+/* Satellite Viewer */
+.satellite-menu {
+  /* satellite window */
+  position: absolute;
+  top: 10vh;
+  right: 2.5vh;
+  color: white;
+  border-style: solid;
+  border-color: black; /* make same color as page?*/
+  border-width: 4px; /* enchanced for visual effect?*/
+  width: 200px;
+  height: 350px;
+  opacity: 0%;
+  text-align: center;
+  top: -400px;
+  /* hide the menu up above, to bring down to user*/
+  background-size: cover;
+  box-shadow: 0 -15px 15px rgba(255, 255, 255, 0.05),
+  inset 0 -15px 15px rgba(255, 255, 255, 0.05),
+  0 15px 15px rgba(0, 0, 0, 0.3),
+  inset 0 -15px 15px rgba(0, 0, 0, 0.3);
+  
+}
+
+/* .color-box{
+  position: relative;
+  width: 250px;
+  height: 450px;
+  background-color: violet;
+  border: 2px orange solid;
+} */
+
+.show-sat-view {
+  float: right;
+  position: relative;
+  /* necessary to show through the SASS background*/
+  opacity: 0%;
+  animation: drop 1.3s ease forwards;
+}
+
+@keyframes drop {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    transform: translateY(430px);
+    opacity: 0.25;
+  }
+  100% {
+    transform: translateY(400px);
+    opacity: 1;
+  }
+}
+/* ?????
+@keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+@-webkit-keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+@-moz-keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+@-webkit-keyframes move-background {
+  from {
+    -webkit-transform: translate3d(0px, 0px, 0px);
+  }
+  to {
+    -webkit-transform: translate3d(1000px, 0px, 0px);
+  }
+}
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.stars {
+  background: black url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png) repeat;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  z-index: 0;
+}
+
+img {
+  height: 70vh;
+  width: 120vh;
+  position: absolute;
+  z-index: 3;
+  top: 15%;
+  left: 23%;
+} */
+
+label {
+  color: white;
+}
+
+form {
+  opacity: 100%;
+  margin-bottom: 20px;
+}
+
+.user-panel {
+  position: absolute;
+  height: 80vh;
+  width: 50vh;
+  left: 20px;
+  opacity: 0%;
+  border: 2px #ffe600 solid;
+  transition: 1.3s ease;
+}
+
+.user-change {
+  opacity: 100%;
+}
+
+.questions {
+  padding: 0;
+  bottom: 2.5vh;
+  right: 2.5vh;
+  width: 5vh;
+  height: 5vh;
+  position: absolute;
+  border: 2px white solid;
+  z-index: 5;
+  text-align: center;
+}
+
+.questions p {
+  margin: 0;
+  position: relative;
+  color: white;
+  font-size: 4vh;
+}
+
+.questions:hover {
+  cursor: help;
+}
+
+/*# sourceMappingURL=styles.css.map */

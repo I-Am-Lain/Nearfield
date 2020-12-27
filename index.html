@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <title>Near Field Objects</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="custom.css">
+  <script type="text/javascript" src="src/admin.js" defer></script>
+  <script type="text/javascript" src="src/three.min.js" defer></script>
+  <script type="text/javascript" src="src/near_field.js" defer></script>
+  <script type="text/javascript" src="src/index.js" defer></script>
+  <script type="text/javascript" src="src/index_menus.js" defer></script>
+</head>
+
+<body id='body'>
+  <div id="container" class="container">
+  </div>
+  <div id="menu-bar">
+      <div id="menu" onclick="onClickMenu()">
+        <div id="bar1" class="bar"></div>
+        <div id="bar2" class="bar"></div>
+        <div id="bar3" class="bar"></div>
+      </div>
+
+      <div id="user-panel" class="user-panel">
+        <form>
+          <input type="radio" id="show-all" name="all-sats" value="show-all">          
+          <label for="show-all">All Satellites</label><br>
+          <input type="radio" id="ActiveGEO" name="all-sats" value="ActiveGEO">
+          <label for="ActiveGEO">Active GEO Satellites</label><br>
+          <input type="radio" id="InactiveGEO" name="all-sats" value="InactiveGEO">
+          <label for="InactiveGEO">Inactive GEO Satellites</label><br>
+          <input type="radio" id="DebrisGEO" name="all-sats" value="DebrisGEO">
+          <label for="DebrisGEO">Debris GEO</label>
+        </form>
+        <ul class='nav' id='nav'>
+        </ul>
+       </div>
+    </div>
+    <div class="menu-bg" id="menu-bg"></div>
+
+
+    <div id="satellite-menu" class="satellite-menu">
+    </div>
+
+    <div id='questions' class='questions'>
+      <p>?</p>
+    </div>
+</body>
+</html>
