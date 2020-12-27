@@ -8,3 +8,7 @@ Displayed are ~15,000 points, each representing either an Active Satellite, Inac
 
 Users can click on each satellite in the left-hand window to highlight the point in space that it's located at.
 Users can also scroll/zoom-in/zoom-out with the 3d-model for better viewing.
+
+
+***Will probably break on mobile***
+***For slower computers, set the filter of satellites to Active***
