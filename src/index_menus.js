@@ -45,7 +45,7 @@ function main(){
 }
 
 // DISABLE THIS AFTER I AM DONE, MAIN IS RUNNING IN BRANDON'S CODE
-// main()
+main()
 // ***********************************************************
 
 

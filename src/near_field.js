@@ -297,29 +297,29 @@ let globe = NEAR_FIELD_OBJECTS.Globe(document.getElementById('container'), funct
 
 let dataArray = []
 
-fetch("http://localhost:3000/satellites")
-  .then(resp => resp.json())
-  .then(satData => {
-        myData = satData // setting global variable to reference later
-        main() // running my code, after we've assuredly set the global
-        satData.forEach(sat => {
-        parseData(sat.x_coor, sat.y_coor, sat.z_coor, sat.color, sat.id)
-      })
-      window.data = dataArray;
-      globe.addData(dataArray);
-      globe.animate(); // we don't have to constantly animate, right?
-      document.body.style.backgroundImage = 'none';
-  })
+// fetch("http://localhost:3000/satellites")
+//   .then(resp => resp.json())
+//   .then(satData => {
+//         myData = satData // setting global variable to reference later
+//         main() // running my code, after we've assuredly set the global
+//         satData.forEach(sat => {
+//         parseData(sat.x_coor, sat.y_coor, sat.z_coor, sat.color, sat.id)
+//       })
+//       window.data = dataArray;
+//       globe.addData(dataArray);
+//       globe.animate(); // we don't have to constantly animate, right?
+//       document.body.style.backgroundImage = 'none';
+//   })
 
-// myData = JSON.parse(data) // setting global variable to reference later
-// // main() // running my code, after we've assuredly set the global
-// myData.forEach(sat => {
-// parseData(sat.x_coor, sat.y_coor, sat.z_coor, sat.color, sat.id)
-// })
-// window.data = dataArray;
-// globe.addData(dataArray);
-// globe.animate(); // we don't have to constantly animate, right?
-// document.body.style.backgroundImage = 'none';
+myData = JSON.parse(data) // setting global variable to reference later
+// main() // running my code, after we've assuredly set the global
+myData.forEach(sat => {
+parseData(sat.x_coor, sat.y_coor, sat.z_coor, sat.color, sat.id)
+})
+window.data = dataArray;
+globe.addData(dataArray);
+globe.animate(); // we don't have to constantly animate, right?
+document.body.style.backgroundImage = 'none';
 
 function parseData(x, y, z, color, id) {
   zScaled = ((z * 11.221461011087312) / 71571600.474816)
