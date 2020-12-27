@@ -211,8 +211,8 @@ body { /* may present conflictions */
   border-style: solid;
   border-color: black; /* make same color as page?*/
   border-width: 4px; /* enchanced for visual effect?*/
-  width: 200px;
-  height: 350px;
+  width: 50vh;
+  height: 75vh;
   opacity: 0%;
   text-align: center;
   top: -400px;
@@ -222,7 +222,12 @@ body { /* may present conflictions */
   inset 0 -15px 15px rgba(255, 255, 255, 0.05),
   0 15px 15px rgba(0, 0, 0, 0.3),
   inset 0 -15px 15px rgba(0, 0, 0, 0.3);
-  
+  font-size: 30px;
+  line-height: 1.2;
+}
+
+.satellite-menu h1{
+  text-decoration: underline;
 }
 
 /* .color-box{
@@ -340,6 +345,7 @@ form {
 
 .questions {
   padding: 0;
+  padding-top: 30px;
   bottom: 2.5vh;
   right: 2.5vh;
   width: 5vh;

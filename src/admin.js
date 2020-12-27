@@ -5,7 +5,7 @@ adminPanel.setAttribute('class', 'admin-div')
 
 const buttonFixer = document.createElement('button');
 buttonFixer.setAttribute("class", "admin-button")
-buttonFixer.innerText = 'DELETE ME'
+buttonFixer.innerText = 'ADMIN PANEL'
 body1.append(buttonFixer);
 
 const adminBtn = buttonFixer;

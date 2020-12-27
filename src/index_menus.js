@@ -7,6 +7,10 @@ const satelliteMenu = document.getElementById('satellite-menu')
 const userPanel = document.getElementById('user-panel')
 const form = document.querySelector('form')
 
+let counter = 0;
+
+// let newData = JSON.parse(data)
+
 function main(){
     // change pixel sizing of EVERYTHING to use VH
     // create a "Authors" link at the bottom, or use a (?) icon
@@ -53,7 +57,6 @@ function main(){
 // {id: 6, name: 'qqqqqqqqqq4', category: {name: 'DebrisGEO'}, owner: 'BRZ'},
 // {id: 7, name: 'qqqqqqqqqq5', category: {name: 'DebrisGEO'}, owner: 'BRZ'}]
 // let myData;
-let counter = 0;
 
 function fetchSatellites(){
     fetch("http://localhost:3000/satellites")
