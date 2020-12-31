@@ -212,7 +212,7 @@ body { /* may present conflictions */
   border-color: black; /* make same color as page?*/
   border-width: 4px; /* enchanced for visual effect?*/
   width: 25%;
-  height: 70%;
+  height: 75%;
   opacity: 0%;
   text-align: center;
   top: -400px;
@@ -381,8 +381,9 @@ form {
   /* Position the tooltip */
   position: absolute;
   z-index: 1;
-  bottom: 30vh;
-  right: 30vh;
+  top: -5px;
+  right: 120%;
+  top: -300px;
   margin-left: -60px;
   opacity: 0;
   transition: opacity 1s ease;
