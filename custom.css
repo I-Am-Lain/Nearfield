@@ -381,8 +381,8 @@ form {
   /* Position the tooltip */
   position: absolute;
   z-index: 1;
-  bottom: 150%;
-  right: 200%;
+  bottom: 30vh;
+  right: 30vh;
   margin-left: -60px;
   opacity: 0;
   transition: opacity 1s ease;
