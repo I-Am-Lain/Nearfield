@@ -34,7 +34,9 @@ function main(){
     
     
     
-    
+    hideCategory('inactive')
+    hideCategory('debris')
+    showCategory('active')
     renderSatellites(myData)
     
     // fetchSatellites()

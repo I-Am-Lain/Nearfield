@@ -21,6 +21,7 @@ html {
   bottom: 2.5vh;
   right: 10vh;
   border: 2px red solid;
+  z-index: 5;
 }
 
 .admin-div{
@@ -167,13 +168,13 @@ body { /* may present conflictions */
   position: absolute;
   padding: 0;
   margin: 0 20px;
-  width: 46vh; /**/
+  width: 90%; /**/
   border-style: solid;
   border-color: #02701a;
   border-width: 3px;
   opacity: 0;
   transition: 1.3s ease;
-  max-height: 65vh; /**/
+  max-height: 80%; /**/
   /*The important part*/
   overflow-y: auto;
   /*Also...*/
@@ -205,14 +206,13 @@ body { /* may present conflictions */
 .satellite-menu {
   /* satellite window */
   position: absolute;
-  top: 10vh;
-  right: 2.5vh;
+  right: 2%;
   color: white;
   border-style: solid;
   border-color: black; /* make same color as page?*/
   border-width: 4px; /* enchanced for visual effect?*/
-  width: 50vh;
-  height: 75vh;
+  width: 25%;
+  height: 70%;
   opacity: 0%;
   text-align: center;
   top: -400px;
@@ -222,8 +222,9 @@ body { /* may present conflictions */
   inset 0 -15px 15px rgba(255, 255, 255, 0.05),
   0 15px 15px rgba(0, 0, 0, 0.3),
   inset 0 -15px 15px rgba(0, 0, 0, 0.3);
-  font-size: 30px;
-  line-height: 1.2;
+  font-size: 1.3vw;
+  line-height: 2;
+  word-wrap: break-word;
 }
 
 .satellite-menu h1{
@@ -331,8 +332,8 @@ form {
 
 .user-panel {
   position: absolute;
-  height: 80vh;
-  width: 50vh;
+  height: 50vw;
+  width: 25vw;
   left: 20px;
   opacity: 0%;
   border: 2px #ffe600 solid;
@@ -344,8 +345,7 @@ form {
 }
 
 .questions {
-  padding: 0;
-  padding-top: 30px;
+  padding: 3vh 0 0 0;
   bottom: 2.5vh;
   right: 2.5vh;
   width: 5vh;
@@ -367,4 +367,53 @@ form {
   cursor: help;
 }
 
+.questions-tooltip {
+
+
+  width: 40vw;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  border-color: white;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  bottom: 150%;
+  right: 200%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 1s ease;
+  pointer-events: none
+}
+
+.questions:hover .questions-tooltip {
+  opacity: 1;
+}
+
+.questions-tooltip .greendot {
+  height: 25px;
+  width: 25px;
+  background-color: green;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.questions-tooltip .graydot {
+  height: 25px;
+  width: 25px;
+  background-color: gray;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.questions-tooltip .reddot {
+  height: 25px;
+  width: 25px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+}
 /*# sourceMappingURL=styles.css.map */
