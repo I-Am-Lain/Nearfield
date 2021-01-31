@@ -20,7 +20,6 @@ html {
   position: absolute;
   bottom: 2.5vh;
   right: 10vh;
-  border: 2px red solid;
   z-index: 5;
 }
 
@@ -156,18 +155,24 @@ body { /* may present conflictions */
 .nav li {
   /* each satellite(li) in the box (ul.nav) */
   list-style: none;
-  padding: 16px 0;
+  padding: .2em 0;
   border-bottom-style: dotted;
   border-color: #f806d8;
   border-width: 1px;
   text-align: center;
 }
 
+.nav li p {
+  margin: .25em;
+}
+
+
+
 .nav {
   /* The box around the list */
   position: absolute;
   padding: 0;
-  margin: 0 20px;
+  margin: 0;
   width: 90%; /**/
   border-style: solid;
   border-color: #02701a;
@@ -212,7 +217,7 @@ body { /* may present conflictions */
   border-color: black; /* make same color as page?*/
   border-width: 4px; /* enchanced for visual effect?*/
   width: 25%;
-  height: 60%;
+  height: 75%;
   opacity: 0%;
   text-align: center;
   top: -400px;
@@ -327,17 +332,19 @@ label {
 
 form {
   opacity: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 1em;
+  margin-top: 1em;
 }
 
 .user-panel {
   position: absolute;
-  height: 50vw;
-  width: 25vw;
+  height: 80vh;
+  width: 20vw;
   left: 20px;
   opacity: 0%;
   border: 2px #ffe600 solid;
   transition: 1.3s ease;
+  padding-left: .85em;
 }
 
 .user-change {
@@ -381,8 +388,8 @@ form {
   /* Position the tooltip */
   position: absolute;
   z-index: 1;
-  bottom: 300px;
-  right: 300px;
+  bottom: 10vh;
+  right: 20vh;
 
   /* margin-left: -60px; */
   opacity: 0;
