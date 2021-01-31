@@ -383,7 +383,7 @@ form {
   text-align: center;
   border-radius: 6px;
   padding: 5px 0;
-  border-color: white;
+  border: 4px white solid;
 
   /* Position the tooltip */
   position: absolute;
